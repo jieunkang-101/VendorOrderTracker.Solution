@@ -1,6 +1,6 @@
 # Pierre's Bakery: Vendor and Order Tracker
 
-#### C# basic Independent Project, 13 March 2020
+#### C# Basic Web Appication Independent Project, 13 March 2020
  
 #### By **_Jieun Kang_**
 

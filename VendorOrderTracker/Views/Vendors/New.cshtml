@@ -1,15 +1,18 @@
-<h1>Add a Vendor</h1>
-<p>Add a Vendor here:</p>
-
-<form action="/vendors" method="post">
-  <label for="name">Vendor Name</label>
-  <input id="name" name="name" type="type">
+@{
+    Layout = "_Layout";
+}
+<div class="container">
+  <h1>Add a Vendor</h1>
+  <form action="/vendors" method="post">
+    <label for="vendorName">Vendor Name</label>
+    <input class="form-control" id="vendorName" name="name" type="text">
+    <br>
+    <label for="vendorDescription">Description</label>
+    <textarea class="form-control" id="vendorDescription" name="description" type="text" placeholder="Vendor description..."></textarea>
+    <br>
+    <button class="btn btn-primary" type="submit">Add Vendor</button>
+  </form>
   <br>
-  <label for="description">Description</label>
-  <textarea id="description" name="description" rows="4">description</textarea>
-  <br>
-  <button type="submit">Add</button>
-</form>
-
-<a href='/'><button class="btn btn-primary btn-block">Back Home</button></a>
-<a href='/vendors'><button class="btn btn-lg btn-primary">Back to Vendors</button></a>
+  <a href='/'><button class="btn btn-primary">Back Home</button></a>
+  <a href='/vendors'><button class="btn btn-primary">Back to Vendors</button></a>
+</div>  

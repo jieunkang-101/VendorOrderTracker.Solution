@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Add a New Order for @Model.Name</h1>
+  <form action="/vendors/@Model.Id/orders" method="post">
+    <label for="orderTitle">Order Title</label>
+    <input class="form-control" id="orderTitle" name="title" type="text">
+    <label for="orderDescription">Description</label>
+    <textarea class="form-control" id="orderDescription" name="description" type="text" placeholder="Order Description..."></textarea>
+    <label for="orderPrice">Price</label>
+    <input class="form-control" id="orderPrice" name="price" type="number">
+    <label for="orderDate">Date</label>
+    <input class="form-control" id="orderDate" name="date" type="date">
+    <br>
+    <button class="btn btn-primary" type="submit">Add Order</button>
+  </form>
+</div>
