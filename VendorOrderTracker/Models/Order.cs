@@ -19,8 +19,8 @@ namespace VendorOrderTracker.Models
       Description = description;
       Price = price;
       Date = date;
-      Id = CurrentId;
       CurrentId ++;
+      Id = CurrentId;
       OrderInstances.Add(this);
     }
 

@@ -16,8 +16,8 @@ namespace VendorOrderTracker.Models
     {
       Name = name;
       Descirption = descirption;
-      Id = CurrentId;
       CurrentId ++;
+      Id = CurrentId;
       Orders = new List<Order> {};
       VendorInstances.Add(this);
     }
