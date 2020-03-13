@@ -15,6 +15,11 @@
       <h5>Price: $ @Model["order"].Price</$ h5>
       <h5>Date: @Model["order"].Date</h5>
     </div>
+    <div class="card-footer">
+      <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/delete' method="post">
+        <button class="btn btn-danger" type="submit">Delete this Order</button>
+      </form>
+    </div>
   </div>  
   <br>
   <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn btn-primary">Add another Order</button></a>

@@ -25,5 +25,12 @@ namespace VendorOrderTracker.Controllers
       tracker.Add("vendor", vendor);
       return View(tracker);
     }
+
+    [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete}")]
+    public ActionResult Destroy(int id)
+    {
+      Order.Delete(id);
+      return View();
+    }
   }
 } 
