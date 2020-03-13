@@ -24,6 +24,12 @@ namespace VendorOrderTracker.Models
       OrderInstances.Add(this);
     }
 
+    public static void ClearAll()
+    {
+      OrderInstances.Clear();
+      CurrentId = 0;
+    }
+
     public static Order Find(int id)
     {
       for (int i = 0; i < OrderInstances.Count; i++)
@@ -39,11 +45,6 @@ namespace VendorOrderTracker.Models
       return null;
     }
 
-    public static void ClearAll()
-    {
-      OrderInstances.Clear();
-    }
-
      public static void Delete(int id)
     {
       for (int i = 0; i < OrderInstances.Count; i++)
@@ -53,6 +54,7 @@ namespace VendorOrderTracker.Models
           if (OrderInstances[i].Id == id)
           {
             OrderInstances.RemoveAt(i);
+            break;
           }
         }
       }
