@@ -1,14 +1,19 @@
 @using VendorOrderTracker.Models;
+@{
+    Layout = "_Layout";
+}
 
-<h3>Here are all the Orders for @Model["vendor"].Name:</h3>
+<div class="contianer">
+  <h3>Here are all the Orders for @Model["vendor"].Name:</h3>
 
-<ol>
-  @foreach (Order order in @Model["orders"])
-  {
-    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
-  }
-</ol>
+  <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+    }
+  </ol>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn btn-lg btn-primary btn-block">Add a New Order</button></a>
-<a href='/vendors'><button class="btn btn-primary btn-block">Return to Vendors List</button></a>
-<a href='/'><button class="btn btn-primary btn-block">Back Home</button></a>
+  <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn btn-primary">Add a New Order</button></a>
+  <a href='/vendors'><button class="btn btn-primary">Return to Vendors List</button></a>
+  <a href='/'><button class="btn btn-primary">Back Home</button></a>
+</div>

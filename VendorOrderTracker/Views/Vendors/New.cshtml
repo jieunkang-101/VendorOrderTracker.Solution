@@ -1,8 +1,10 @@
 @{
     Layout = "_Layout";
 }
+
 <div class="container">
   <h1>Add a Vendor</h1>
+
   <form action="/vendors" method="post">
     <label for="vendorName">Vendor Name</label>
     <input class="form-control" id="vendorName" name="name" type="text">
@@ -13,6 +15,7 @@
     <button class="btn btn-primary" type="submit">Add Vendor</button>
   </form>
   <br>
+  
   <a href='/'><button class="btn btn-primary">Back Home</button></a>
   <a href='/vendors'><button class="btn btn-primary">Back to Vendors</button></a>
 </div>  

@@ -34,8 +34,6 @@ An MVC application to help Pierre track the vendors that purchase baked goods fr
     * `$ cd VendorOrderTracker.Solution`
 2. Run this MVC application
     * `$ cd VendorOrderTracker`
-    * `$ dotnet restore`
-    * `$ dotnet build`
     * `$ dotnet run` 
     * Open the bowser link to http://localhost:5000
 
