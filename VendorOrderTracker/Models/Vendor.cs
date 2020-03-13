@@ -6,16 +6,16 @@ namespace VendorOrderTracker.Models
   public class Vendor
   {
     public string Name { get; set; }
-    public string Descirption { get; set; }
+    public string Description { get; set; }
     public int Id { get; set; }
     public static int CurrentId { get; set; } = 0;
     public List<Order> Orders { get; set; }
     public static List<Vendor> VendorInstances { get; } = new List<Vendor> {};
 
-    public Vendor(string name, string descirption)
+    public Vendor(string name, string description)
     {
       Name = name;
-      Descirption = descirption;
+      Description = description;
       CurrentId ++;
       Id = CurrentId;
       Orders = new List<Order> {};
@@ -57,7 +57,7 @@ namespace VendorOrderTracker.Models
           if (VendorInstances[i].Id == id)
           {
             VendorInstances.RemoveAt(i);
-            break;
+            //break;
           }
         }
       }
