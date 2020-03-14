@@ -75,5 +75,7 @@ namespace VendorOrderTracker.Controllers
       Vendor.Delete(id);
       return RedirectToAction("Index");
     }
+
+  
   }
 } 

@@ -1,9 +1,18 @@
-div#footer {
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#333;
-  padding:8px;
+.card {
+  padding: 20px;
+  margin: 20px;
+  position: relative;
 }
+
+.btn {
+  background-color:  #46124b;
+  color: #C197D2;
+  margin: 20px;
+}
+
+label {
+  color: rgb(39, 12, 26);
+  font-size: 25px;
+  margin: 10px;
+}
+
