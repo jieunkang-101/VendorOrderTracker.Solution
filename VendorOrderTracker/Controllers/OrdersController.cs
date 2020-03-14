@@ -32,6 +32,5 @@ namespace VendorOrderTracker.Controllers
       Vendor.Delete(orderId);
       return View();
     }
- 
   }
 } 

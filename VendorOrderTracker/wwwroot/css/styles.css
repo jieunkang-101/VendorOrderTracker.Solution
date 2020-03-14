@@ -1,13 +1,56 @@
+body {
+  background-image: url("https://envato-shoebox-0.imgix.net/b37d/4ac0-8482-4905-8032-3d86c31a9d48/sep-16.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1400&s=b715e475f962a8cfe424477f002a300a");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron {
+  background: rgba(179, 130, 117, 0.479);
+  text-align: center;
+  color: rgb(46, 34, 19);
+  font-weight: 600;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 2.6em;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  color: rgb(253, 253, 253);
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  color: rgb(247, 247, 247);
+}
+
+#container {
+  margin-top: 50px;
+}
+
+label, input {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 .card {
   padding: 20px;
   margin: 20px;
-  position: relative;
 }
 
 .btn {
-  background-color:  #46124b;
-  color: #C197D2;
-  margin: 20px;
+  background-color:  #c47c5bce;
+  color: rgb(241, 231, 221);
+  font-size: 25px;
+  margin: 5px;
+}
+
+.btn-center{
+  display: flex;
+  justify-content: space-around;
 }
 
 label {

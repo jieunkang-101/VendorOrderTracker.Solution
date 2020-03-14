@@ -5,9 +5,9 @@
 
 <div class="container">
   <h1>Vendors</h1>
+  <br>
   <hr>
   <br>
-
   @if (@Model.Count == 0)
   {
     <h4>No Vendors have been added yet!</h4>
@@ -45,9 +45,8 @@
         </div>
       </div>      
     }
-
-    <hr>
-    <a href='/vendors/new'><button type="button" class="btn">Add a New Vendor</button></a>
-    <a href='/'><button type="button" class="btn">Back Home</button></a>
   }
+  <hr>
+  <a href='/vendors/new'><button type="button" class="btn">Add a New Vendor</button></a>
+  <a href='/'><button type="button" class="btn">Back Home</button></a>
 </div>
