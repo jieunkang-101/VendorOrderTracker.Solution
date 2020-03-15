@@ -38,22 +38,22 @@ An MVC application to help Pierre track the vendors that purchase baked goods fr
     * Launch localhost http://localhost:5000
 
 ## Behavior Driven Development Specifications
-| Behavior(Spec) <img width=600/>    | Input <img width=400/>   | Output <img width=500/>  |
-| :---------------- | :----- | -----: |
-| Upon launching the application, user sees homepage | http://localhost:5000 | Splash Page |
-| Upon clicking on [Vendors], user can view all vendors that have been added | Click [Vendors] tab | Display a list of all vendors |
-| Upon clicking on [Add New Vendor], user can add a new vendor | Click [Add New Vendor] tab,<br>Vendor Name: Suzie's Cafe <br> Description: ** <br> Click [Add Vendor] | The new vendor added to vendor list, and user can select [View/ Add Order], [Edit Vendor Info], or [Delete this Vendor] | 
-| If user select [Edit Vendor Info], user can update individual vendor's information | Click [Edit Vendor Info]<br> Vendor Name: SUZIE'S CAFE | Updated vendors list page |
-| If user select [Delete this Vendor], user can delete individual vendor | Click [Delete this Vendor] | Refresh vendors list page without this vendor |
-| If user select [View/ Add Order], user cad add a new order for a particular vendor | Order Title: **<br> Description: ** <br> Price: $ <br> Date: mm/dd/yyyy <br> Click [Add Order] | The new order added a list of orders, and user can select individual order to see the details |
-| If user click the order title, user can see the order details, and user can delete individual order | Click [Delete this Order] | Order has been deleted |
+|| Behavior(Spec)  | Input   | Output  |
+|---| :---------------- | :----- | :----- |
+|1| Upon launching the application, user sees homepage | http://localhost:5000 | Splash Page <br> Display navigation bar `Vendors`, `AddNewVendor` |
+|2| User can view all vendors that currently exist <li>Click `Vendors` in the navbar</li> <li>User can select `View/Add Order`, `Edit Vendor Info` or `Delete this Vendor`</li> | Click `Vendors`| Display a list of all vendors. Each vendor has `View/Add Order`, `Edit Vendor Info`, `Delete this Vendor` buttons |
+|3| User can add a new vendor <li>Click `AddNewVendor` in the navbar</li> <li>A application returns a form to enter the vendor's information</li> | Click `AddNewVendor` <br>Vendor Name: Suzie's Cafe <br> Description: ** <br> Click `Add Vendor` | Vendors <br>...<br> Suzie's Cafe <br>...| 
+|4| User can update individual vendor's information <li>Click `Edit Vendor Info` button</li><li>A application returns a form to edit the vendor's information</li>  | Click `Edit Vendor Info`<br> Vendor Name: SUZIE'S CAFE <br>Click `Update` | Updated vendors list page <br>...<br> SUZIE'S CAFE<br>... |
+|5| User can delete individual vendor <li>Click `Delete this Vendor` button</li> <li>A application returns a form to confirm deletion this vendor</li> | Click `Delete this Vendor`<br>Click `Yes` <br> Click `Delete` | Refresh vendors list page without this vendor |
+|6| User can add a new order or view all orders for a particular vendor <li>Click `View/Add Order` button</li> |Click `View/Add Order`<br>Click `Add a New Order`<br>Order Title: Brioche <br> Description: ** <br> Price: $ <br> Date: mm/dd/yyyy <br> Click `Add Order` | Orders for `Suzie's Cafe` <br> Brioche <br> ...|
+|7| User can view a order's details <li>Click `Brioche`</li> | Click `Brioche` | Order Details: <br> Brioche <br> Description: ** <br> Price: $ <br> Date: mm/dd/yyyy |
+|8| User can delete individual order <li>Click `Delete this Order`</li> | Click `Delete this order` | Confimation message: Order has been deleted |
 
 ## Technologies Used
 
 * C#
 * .NET
 * ASP.NET Core MVC
-* CSS
 * Bootstrap
 
 ### License

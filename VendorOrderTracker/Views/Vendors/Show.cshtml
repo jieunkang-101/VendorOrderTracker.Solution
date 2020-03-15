@@ -19,10 +19,12 @@
     <br>
     <h3>Orders for @Model["vendor"].Name:</h3>
     <hr>
+    <ol>
     @foreach (Order order in @Model["orders"])
     {
-      <h4><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title: @order.Date</a></h4>         
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Order Title: @order.Title</a></li>         
     }
+    </ol>
     <br>
   }  
   <br>
