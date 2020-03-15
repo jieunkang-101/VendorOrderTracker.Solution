@@ -60,13 +60,19 @@ namespace VendorOrderTracker.Controllers
     }
 
     [HttpPost("/vendors/{id}")]
-    public ActionResult Update(int id, string name, string description)
+    public ActionResult Update(int id, string updatedName, string updatedDescription)
     {
       Vendor foundVendor = Vendor.Find(id);
-      foundVendor.Name = name;
-      foundVendor.Description = description;
+      if (updatedName != null)
+      {
+        foundVendor.Name = updatedName;
+      }
+      if (updatedDescription != null)
+      {
+        foundVendor.Description = updatedDescription;
+      }
       List<Order> orderForVendor = foundVendor.Orders;
-      return RedirectToAction("Index", foundVendor);
+      return RedirectToAction("Index", id);
     }  
 
     [HttpPost("/vendors/{id}/delete")]

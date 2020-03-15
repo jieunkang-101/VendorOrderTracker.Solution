@@ -3,16 +3,18 @@
 }
 
 <div class="container">
+  <br>
+  <br>
   <h2>Edit vendor</h2>
-
+  <br>
   <form action='/vendors/@Model.Id' method="post">
     <label for="vendorName">Vendor Name</label>
-    <input class="form-control" id="vendorName" name="name" type="text">
+    <input class="form-control" id="vendorName" name="updatedName" type="text">
     <br>
     <label for="vendorDescription">Description</label>
-    <textarea class="form-control" id="vendorDescription" name="description" type="text"></textarea>
+    <textarea class="form-control" id="vendorDescription" name="updatedDescription" type="text"></textarea>
     <br>
-    <button class="btn" type="submit">Add Vendor</button>
+    <button class="btn" type="submit">Update</button>
   </form>
-
+  <br>
 </div>
