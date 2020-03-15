@@ -23,18 +23,22 @@
       <div class="card-body">
         <h5 class="card-title">Vendor Description: </h5>
         <p class="card-text">@vendor.Description</p>
-        <h5><a href="/vendors/@vendor.Id">View/Add Order</a></h5>
       </div>
       <div class="card-footer"> 
         <div class="row">
-          <div class="col-md-6">
-            <form action='/vendors/@vendor.Id/edit'>
-              <button class="btn btn-warning" type="submit">Edit Vendor Info</button>
+          <div class="col-md-4">
+            <form action='/vendors/@vendor.Id'>
+              <button class="btn" type="submit">View/Add Order</button>
             </form>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
+            <form action='/vendors/@vendor.Id/edit'>
+              <button class="btn" type="submit">Edit Vendor Info</button>
+            </form>
+          </div>
+          <div class="col-md-4">
             <form action='/vendors/@vendor.Id/delete' method="post">
-              <button class="btn btn-danger" type="submit">Delete this Vendor</button>
+              <button class="btn" type="submit">Delete this Vendor</button>
             </form>
           </div>
         </div>    
