@@ -6,38 +6,26 @@
 
 <div class="container">
 
-  @if (@Model["vendor"] == null)
+  @if (@Model["vendor"].Orders.Count == 0)
   {
-    <h3>The vendor was deleted.</h3>
+    <br>
+    <br>
+    <h3>There are currently no orders for @Model["vendor"].Name</h3>
   }
   
   else
   {
-    if (@Model["orders"] == null)
-    {
-      <h5>No orders have been added yet.</h5>
-    }
-
-    else
-    {
-      <h3>Orders for @Model["vendor"].Name:</h3>
-      <hr>
-      @foreach (Order order in @Model["orders"])
-      {
-        <h5><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></h5>         
-      }
-      <br>
-      <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn btn-primary">Add a New Order</button></a>
-    }  
-  }
+    <br>
+    <br>
+    <h3>Orders for @Model["vendor"].Name:</h3>
     <hr>
-    <form action='/vendors/@Model["vendor"].Id/delete' method="post">
-      <button class="btn btn-danger" type="submit">Delete this Vendor: @Model["vendor"].Name</button>
-    </form>
-    <form action="/vendors">
-      <button type="submit" class="btn">Return to Vendors List</button>
-    </form>
-    <form action="/">
-      <button type="submit" class="btn">Back Home</button>
-    </form>  
+    @foreach (Order order in @Model["orders"])
+    {
+      <h4><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title: @order.Date</a></h4>         
+    }
+    <br>
+  }  
+  <br>
+  <hr>
+  <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn">Add a New Order</button></a>
 </div>

@@ -62,5 +62,20 @@ namespace VendorOrderTracker.Models
         }
       }
     }
+
+    public void DeleteOrder(int id)
+    {
+      for (int i = 0; i < Orders.Count; i++)
+      {
+        if (Orders[i] is Order)
+        {
+          if (Orders[i].Id == id)
+          {
+            Orders.RemoveAt(i);
+            break;
+          }
+        }
+      }
+    }
   }
 }  

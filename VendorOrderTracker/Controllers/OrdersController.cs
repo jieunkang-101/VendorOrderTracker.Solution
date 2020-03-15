@@ -29,7 +29,8 @@ namespace VendorOrderTracker.Controllers
     [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
     public ActionResult Destroy(int vendorId, int orderId)
     {
-      Vendor.Delete(orderId);
+      Vendor foundVendor = Vendor.Find(vendorId);
+      foundVendor.DeleteOrder(orderId);
       return View();
     }
   }

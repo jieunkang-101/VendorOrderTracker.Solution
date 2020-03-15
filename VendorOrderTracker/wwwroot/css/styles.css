@@ -1,30 +1,24 @@
+.nav-link, .navbar-brand {
+  font-size: 1.5em;
+}
+
 body {
-  background-image: url("https://envato-shoebox-0.imgix.net/b37d/4ac0-8482-4905-8032-3d86c31a9d48/sep-16.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1400&s=b715e475f962a8cfe424477f002a300a");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
 }
 
-.jumbotron {
-  background: rgba(179, 130, 117, 0.479);
+.card-splash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-text {
   text-align: center;
-  color: rgb(46, 34, 19);
   font-weight: 600;
-  font-size: 2em;
-}
-
-h1 {
-  font-size: 2.6em;
-  font-family: 'Paytone One', sans-serif;
-  text-align: center;
-  color: rgb(253, 253, 253);
-}
-
-h2 {
-  font-size: 2em;
-  font-family: 'Paytone One', sans-serif;
-  text-align: center;
-  color: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #container {
@@ -42,20 +36,22 @@ label, input {
 }
 
 .btn {
+  border-radius: 15px;
+  border: 2px solid #a1471dce;
   background-color:  #c47c5bce;
   color: rgb(241, 231, 221);
-  font-size: 25px;
+  font-size: 20px;
   margin: 5px;
 }
 
 .btn-center{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 label {
   color: rgb(39, 12, 26);
   font-size: 25px;
   margin: 10px;
-}
+} 
 

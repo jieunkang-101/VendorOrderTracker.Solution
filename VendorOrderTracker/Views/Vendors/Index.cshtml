@@ -4,6 +4,7 @@
 }
 
 <div class="container">
+  <br>
   <h1>Vendors</h1>
   <br>
   <hr>
@@ -12,41 +13,32 @@
   {
     <h4>No Vendors have been added yet!</h4>
   }
-  else
+
+  @foreach (Vendor vendor in Model)
   {
-    @foreach (Vendor vendor in Model)
-    {
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-header">
-              <h4>@vendor.Name</h4>
-            </div>  
-            <div class="card-body">
-              <h5 class="card-title">Vendor Description: </h5>
-              <p class="card-text">@vendor.Description</p>
-              <h5><a href="/vendors/@vendor.Id">View Order</a></h5>
-            </div>
-            <div class="card-footer"> 
-              <div class="row">
-                <div class="col-md-6">
-                  <form action='/vendors/@vendor.Id/edit' method="post">
-                    <button class="btn btn-warning" type="submit">Edit Vendor Info</button>
-                  </form>
-                </div>
-                <div class="col-md-6">
-                  <form action='/vendors/@vendor.Id/delete' method="post">
-                    <button class="btn btn-danger" type="submit">Delete this Vendor</button>
-                  </form>
-                </div>
-              </div>    
-            </div>   
-          </div>  
-        </div>
-      </div>      
-    }
+    <div class="card">
+      <div class="card-header">
+        <h4>@vendor.Name</h4>
+      </div>  
+      <div class="card-body">
+        <h5 class="card-title">Vendor Description: </h5>
+        <p class="card-text">@vendor.Description</p>
+        <h5><a href="/vendors/@vendor.Id">View/Add Order</a></h5>
+      </div>
+      <div class="card-footer"> 
+        <div class="row">
+          <div class="col-md-6">
+            <form action='/vendors/@vendor.Id/edit' method="post">
+              <button class="btn btn-warning" type="submit">Edit Vendor Info</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <form action='/vendors/@vendor.Id/delete' method="post">
+              <button class="btn btn-danger" type="submit">Delete this Vendor</button>
+            </form>
+          </div>
+        </div>    
+      </div>   
+    </div>  
   }
-  <hr>
-  <a href='/vendors/new'><button type="button" class="btn">Add a New Vendor</button></a>
-  <a href='/'><button type="button" class="btn">Back Home</button></a>
 </div>

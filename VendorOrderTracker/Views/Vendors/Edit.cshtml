@@ -3,20 +3,16 @@
 }
 
 <div class="container">
-  <div class="card">
-    <div class="card-header">
-      Hello
-    </div>  
-    <div class="card-body">
-      <form action='/vendors/@Model["vendor"].Id' method="post">
-        <label for="vendorName">Vendor Name</label>
-        <input class="form-control" id="vendorName" name="name" type="text">
-        <br>
-        <label for="vendorDescription">Description</label>
-        <textarea class="form-control" id="vendorDescription" name="description" type="text"></textarea>
-        <br>
-        <button class="btn" type="submit">Add Vendor</button>
-      </form>
-    </div>  
-  </div>
-  <br>
+  <h2>Edit vendor</h2>
+
+  <form action='/vendors/@Model.Id' method="post">
+    <label for="vendorName">Vendor Name</label>
+    <input class="form-control" id="vendorName" name="name" type="text">
+    <br>
+    <label for="vendorDescription">Description</label>
+    <textarea class="form-control" id="vendorDescription" name="description" type="text"></textarea>
+    <br>
+    <button class="btn" type="submit">Add Vendor</button>
+  </form>
+
+</div>

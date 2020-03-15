@@ -66,7 +66,7 @@ namespace VendorOrderTracker.Controllers
       foundVendor.Name = name;
       foundVendor.Description = description;
       List<Order> orderForVendor = foundVendor.Orders;
-      return RedirectToAction("Index", id);
+      return RedirectToAction("Index", foundVendor);
     }  
 
     [HttpPost("/vendors/{id}/delete")]
