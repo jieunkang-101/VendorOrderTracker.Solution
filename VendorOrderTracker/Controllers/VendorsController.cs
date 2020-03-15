@@ -59,27 +59,33 @@ namespace VendorOrderTracker.Controllers
       return View(selectedVendor);
     }
 
-    [HttpPost("/vendors/{id}")]
-    public ActionResult Update(int id, string updatedName, string updatedDescription)
-    {
-      Vendor foundVendor = Vendor.Find(id);
-      if (updatedName != null)
-      {
-        foundVendor.Name = updatedName;
-      }
-      if (updatedDescription != null)
-      {
-        foundVendor.Description = updatedDescription;
-      }
-      List<Order> orderForVendor = foundVendor.Orders;
-      return RedirectToAction("Index", id);
-    }  
-
-    [HttpPost("/vendors/{id}/delete")]
+    [HttpGet("/vendors/{id}/delete")]
     public ActionResult Destroy(int id)
     {
-      Vendor.Delete(id);
-      return RedirectToAction("Index");
+      Vendor selectedVendor = Vendor.Find(id);
+      return View(selectedVendor);
     }
+
+    [HttpPost("/vendors/{id}")]
+    public ActionResult Update(int id, string updatedName, string updatedDescription, bool deleteVendor)
+    {
+      Vendor foundVendor = Vendor.Find(id);
+      if (!deleteVendor)
+      {
+        if (updatedName != null)
+        {
+          foundVendor.Name = updatedName;
+        }
+        if (updatedDescription != null)
+        {
+          foundVendor.Description = updatedDescription;
+        }
+      }
+      else
+      {
+        Vendor.Delete(id);
+      }
+      return RedirectToAction("Index", id);
+    }  
   }
 } 

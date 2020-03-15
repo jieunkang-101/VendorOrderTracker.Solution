@@ -1,0 +1,23 @@
+@using VendorOrderTracker.Models;
+
+@{
+  Layout = "_layout";
+}
+
+<div class="container">
+  <br>
+  <h2>Delete Vendor</h2>
+  <br>
+  <h3>Would you like to delete @Model.Name ?</h3>
+  <form action="/vendors/@Model.Id" method="post">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="deleteVendor" id="deleteVendor" value="true">
+      <label class="form-check-label" for="deleteVendor">Yes</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="deleteVendor" id="deleteVendor" value="false">
+      <label class="form-check-label" for="deleteVendor">No</label>
+    </div>
+    <button type="submit" class="btn">Delete / Back</button>
+  </form>
+</div>
