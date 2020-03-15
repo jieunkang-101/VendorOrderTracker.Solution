@@ -38,14 +38,14 @@ An MVC application to help Pierre track the vendors that purchase baked goods fr
     * Launch localhost http://localhost:5000
 
 ## Behavior Driven Development Specifications
-| Behavior(Spec) <img width=500/>    | Input <img width=400/>   | Output <img width=500/>  |
-| :---------------- | :-----: | :-----: |
+| Behavior(Spec) <img width=600/>    | Input <img width=400/>   | Output <img width=500/>  |
+| :---------------- | :----- | -----: |
 | Upon launching the application, user sees homepage | http://localhost:5000 | Splash Page |
-| Upon clicking on [Vendors] tab, user can view all vendors that have been added | Click [Vendors] tab | Display a list of all vendors |
-| Upon clicking on [Add New Vendor] tab, user can add a new vendor | Click [Add New Vendor] tab,<br>Vendor Name: Suzie's Cafe <br> Description: ** <br> Click [Add Vendor] | The new vendor added to vendor list, and user can select [View/ Add Order], [Edit Vendor Info], [Delete this Vendor] | 
-| If user select [Edit Vendor Info], user can update individual vendor's information | Click [Edit Vendor Info] | Vendor Name: SUZIE'S CAFE |
-| If user select [Delete this Vendor], user can delete individual vendor | Click [Delete this Vendor] | Refresh vendors list page |
-| If user select [View/ Add Order], user cad add a new order for a particular vendor | Order Title<br> Description <br> Price <br> Date <br> Click [Add Order] | The new order added to order list, and user can select individual order to see details |
+| Upon clicking on [Vendors], user can view all vendors that have been added | Click [Vendors] tab | Display a list of all vendors |
+| Upon clicking on [Add New Vendor], user can add a new vendor | Click [Add New Vendor] tab,<br>Vendor Name: Suzie's Cafe <br> Description: ** <br> Click [Add Vendor] | The new vendor added to vendor list, and user can select [View/ Add Order], [Edit Vendor Info], or [Delete this Vendor] | 
+| If user select [Edit Vendor Info], user can update individual vendor's information | Click [Edit Vendor Info]<br> Vendor Name: SUZIE'S CAFE | Updated vendors list page |
+| If user select [Delete this Vendor], user can delete individual vendor | Click [Delete this Vendor] | Refresh vendors list page without this vendor |
+| If user select [View/ Add Order], user cad add a new order for a particular vendor | Order Title: **<br> Description: ** <br> Price: $ <br> Date: mm/dd/yyyy <br> Click [Add Order] | The new order added a list of orders, and user can select individual order to see the details |
 | If user click the order title, user can see the order details, and user can delete individual order | Click [Delete this Order] | Order has been deleted |
 
 ## Technologies Used
